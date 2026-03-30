@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Niceday｜遠端親子活動小編 全台招募中</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --orange: #FF9A00;
+  --orange-light: #FFB733;
+  --orange-dark: #E07800;
+  --yellow: #FFD23F;
+  --yellow-light: #FFF8D6;
+  --blue: #2B5FBF;
+  --blue-dark: #1E4499;
+  --teal: #1A9E7E;
+  --teal-dark: #137A60;
+  --white: #FFFFFF;
+  --off-white: #FFFCF5;
+  --charcoal: #2D2926;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  background: var(--off-white);
+  color: var(--charcoal);
+  max-width: 480px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+/* ─── HERO ─── */
+.hero {
+  background: linear-gradient(175deg, #FFB300 0%, #FF9A00 50%, #FF7F00 100%);
+  padding: 18px 20px 36px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.logo {
+  background: var(--teal);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 900;
+  padding: 5px 16px;
+  border-radius: 999px;
+}
+
+.recruit-tag {
+  background: rgba(255,255,255,0.25);
+  color: #fff;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(255,255,255,0.45);
+}
+
+/* brand image */
+.hero-img-wrap {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 14px 48px rgba(0,0,0,0.22);
+  border: 3px solid rgba(255,255,255,0.55);
+  margin-bottom: 22px;
+}
+.hero-img-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-title {
+  font-size: 28px;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.3;
+  text-align: center;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.12);
+  margin-bottom: 6px;
+}
+.hero-title .hl { color: var(--yellow); }
+
+.hero-sub {
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.9);
+  background: rgba(255,255,255,0.18);
+  border-radius: 999px;
+  padding: 6px 16px;
+  margin-bottom: 20px;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+.stat-pill {
+  flex: 1;
+  background: rgba(255,255,255,0.2);
+  border: 1.5px solid rgba(255,255,255,0.4);
+  border-radius: 14px;
+  padding: 10px 4px;
+  text-align: center;
+}
+.stat-pill strong {
+  display: block;
+  font-size: 19px;
+  font-weight: 900;
+  color: var(--yellow);
+  line-height: 1;
+}
+.stat-pill span {
+  font-size: 10px;
+  color: rgba(255,255,255,0.85);
+  font-weight: 500;
+}
+
+.cta-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 17px 20px;
+  border-radius: 16px;
+  font-size: 17px;
+  font-weight: 900;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: transform 0.15s, box-shadow 0.15s;
+  border: none;
+  cursor: pointer;
+}
+.cta-btn:active { transform: translateY(3px); }
+
+.cta-primary {
+  background: var(--teal);
+  color: #fff;
+  box-shadow: 0 6px 0 var(--teal-dark);
+}
+.cta-primary:active { box-shadow: 0 2px 0 var(--teal-dark); }
+
+/* ─── PAIN POINTS ─── */
+.pain-section {
+  background: var(--orange-light);
+  padding: 38px 20px 34px;
+}
+
+.sec-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.sec-title {
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1.3;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.pain-section .sec-label { color: rgba(255,255,255,0.7); }
+.pain-section .sec-title { color: #fff; text-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+
+.pain-cards { display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px; }
+
+.pain-card {
+  background: var(--blue);
+  border-radius: 12px;
+  padding: 13px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 4px 0 var(--blue-dark);
+}
+.pain-card .icon { font-size: 20px; flex-shrink: 0; }
+.pain-card p { font-size: 15px; font-weight: 700; color: #fff; }
+
+.pain-resolve {
+  background: rgba(255,255,255,0.28);
+  border: 1.5px dashed rgba(255,255,255,0.6);
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.teal-badge {
+  background: var(--teal);
+  color: #fff;
+  border-radius: 12px;
+  padding: 13px;
+  font-size: 15px;
+  font-weight: 900;
+  text-align: center;
+  box-shadow: 0 4px 0 var(--teal-dark);
+}
+
+/* ─── TASKS ─── */
+.tasks-section {
+  background: var(--off-white);
+  padding: 40px 20px;
+}
+.tasks-section .sec-label { color: #aaa; }
+.tasks-section .sec-title { color: var(--charcoal); }
+.tasks-section .sec-title em { font-style: normal; color: var(--orange-dark); }
+
+.task-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 15px;
+  background: #fff;
+  border-radius: 16px;
+  margin-bottom: 10px;
+  border: 2px solid var(--yellow);
+  box-shadow: 0 3px 0 #DBA800;
+}
+.task-num {
+  width: 36px; height: 36px;
+  border-radius: 10px;
+  background: var(--orange);
+  color: #fff;
+  font-size: 16px; font-weight: 900;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.task-text h4 { font-size: 13.5px; font-weight: 700; color: var(--blue-dark); margin-bottom: 3px; }
+.task-text p { font-size: 12.5px; color: #777; line-height: 1.6; }
+.tasks-note { text-align: center; font-size: 12.5px; color: #aaa; margin-top: 12px; }
+
+/* ─── PERKS ─── */
+.perks-section {
+  background: var(--yellow-light);
+  padding: 40px 20px;
+  border-top: 3px dashed var(--yellow);
+  border-bottom: 3px dashed var(--yellow);
+}
+.perks-section .sec-label { color: #bbb; }
+.perks-section .sec-title { color: var(--charcoal); }
+
+.salary-block {
+  background: var(--orange);
+  border-radius: 18px;
+  padding: 18px 20px;
+  margin: 16px 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 5px 0 var(--orange-dark);
+}
+.salary-num { font-size: 44px; font-weight: 900; color: #fff; line-height: 1; }
+.salary-right strong { display: block; font-size: 15px; font-weight: 700; color: #fff; }
+.salary-right span { font-size: 12px; color: rgba(255,255,255,0.8); }
+
+.perk-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.perk-chip {
+  background: #fff;
+  border: 2px solid var(--orange);
+  border-radius: 999px;
+  padding: 7px 13px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--orange-dark);
+}
+
+.bonus-block {
+  background: var(--blue);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 4px 0 var(--blue-dark);
+}
+.bonus-block h4 { font-size: 14px; font-weight: 900; color: var(--yellow); margin-bottom: 8px; }
+.bonus-block p { font-size: 13px; color: rgba(255,255,255,0.88); line-height: 1.7; }
+.bonus-block strong { color: var(--yellow); }
+
+/* ─── FINAL CTA ─── */
+.final-section {
+  background: linear-gradient(170deg, #FF9A00 0%, #FFB300 100%);
+  padding: 50px 20px 64px;
+  text-align: center;
+}
+.final-section .sec-title { color: #fff; font-size: 24px; text-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 10px; }
+.final-section p { font-size: 14px; color: rgba(255,255,255,0.88); line-height: 1.85; margin-bottom: 28px; }
+
+.cta-secondary {
+  background: var(--teal);
+  color: #fff;
+  box-shadow: 0 6px 0 var(--teal-dark);
+}
+.cta-secondary:active { box-shadow: 0 2px 0 var(--teal-dark); }
+
+.line-note { font-size: 11px; color: rgba(255,255,255,0.5); margin-top: 14px; }
+
+/* ─── FOOTER ─── */
+footer {
+  background: var(--charcoal);
+  padding: 20px;
+  text-align: center;
+  font-size: 11px;
+  color: rgba(255,255,255,0.3);
+}
+
+/* ─── REVEAL ─── */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.55s ease, transform 0.55s ease; }
+.reveal.in { opacity: 1; transform: none; }
+</style>
+</head>
+<body>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="hero-topbar">
+    <div class="logo">niceday</div>
+    <div class="recruit-tag">🔔 全台招募中</div>
+  </div>
+
+  <div class="hero-img-wrap">
+    <img src="Niceday2__2_.png" alt="Niceday 遠端親子活動小編" loading="eager">
+  </div>
+
+  <h1 class="hero-title"><span class="hl">遠端親子活動小編</span><br>現在全台招募！</h1>
+  <div class="hero-sub">⚡ 不進辦公室・彈性排班・週週領薪</div>
+
+  <div class="hero-stats">
+    <div class="stat-pill"><strong>$250</strong><span>起薪時薪</span></div>
+    <div class="stat-pill"><strong>5–15h</strong><span>每週彈性</span></div>
+    <div class="stat-pill"><strong>100%</strong><span>遠端自由</span></div>
+  </div>
+
+  <a href="https://lin.ee/xP01tIZ" class="cta-btn cta-primary" target="_blank" rel="noopener">
+    🙋 我要應徵，立刻加入！
+  </a>
+</section>
+
+<!-- ══ PAIN POINTS ══ -->
+<section class="pain-section reveal">
+  <p class="sec-label">你是我們在找的人嗎</p>
+  <h2 class="sec-title">這些問題，<br>讓你來解決！</h2>
+
+  <div class="pain-cards">
+    <div class="pain-card"><span class="icon">📅</span><p>活動行程對不上？</p></div>
+    <div class="pain-card"><span class="icon">🏷️</span><p>資訊標記不清楚？</p></div>
+    <div class="pain-card"><span class="icon">👨‍👩‍👧</span><p>家長需求有落差？</p></div>
+  </div>
+
+  <div class="pain-resolve">照著 SOP，一鍵排解所有煩惱！✨</div>
+  <div class="teal-badge">🕒 時間自由・💎 質感生活</div>
+</section>
+
+<!-- ══ TASKS ══ -->
+<section class="tasks-section reveal">
+  <p class="sec-label">工作內容</p>
+  <h2 class="sec-title">你能做的 <em>四件事</em></h2>
+
+  <div class="task-item">
+    <div class="task-num">1</div>
+    <div class="task-text">
+      <h4>活動資訊整理</h4>
+      <p>將科學營、森林探險等活動，轉成家長一看就懂的清晰文字。</p>
+    </div>
+  </div>
+  <div class="task-item">
+    <div class="task-num">2</div>
+    <div class="task-text">
+      <h4>家長預約管理</h4>
+      <p>照 SOP 確認地點與年齡標籤，讓每個家庭精準預約不踩雷。</p>
+    </div>
+  </div>
+  <div class="task-item">
+    <div class="task-num">3</div>
+    <div class="task-text">
+      <h4>視覺排版優化</h4>
+      <p>用教育眼光排版最吸睛的活動頁面，讓亮點被看見。</p>
+    </div>
+  </div>
+  <div class="task-item">
+    <div class="task-num">4</div>
+    <div class="task-text">
+      <h4>即時異動處理</h4>
+      <p>遇到行程變動，依 SOP 帥氣修正，你是最強後援。</p>
+    </div>
+  </div>
+
+  <p class="tasks-note">不需進辦公室，夠細心、愛排程就能上手。</p>
+</section>
+
+<!-- ══ PERKS ══ -->
+<section class="perks-section reveal">
+  <p class="sec-label">工作模式與待遇</p>
+  <h2 class="sec-title">你能得到的一切</h2>
+
+  <div class="salary-block">
+    <div class="salary-num">$250</div>
+    <div class="salary-right">
+      <strong>起薪時薪・週週結算</strong>
+      <span>收入穩定，清楚看得見</span>
+    </div>
+  </div>
+
+  <div class="perk-chips">
+    <div class="perk-chip">🏠 全遠端作業</div>
+    <div class="perk-chip">🕐 24h 自由排班</div>
+    <div class="perk-chip">⏱ 每週 5–15 小時</div>
+    <div class="perk-chip">📶 有網路就能做</div>
+  </div>
+
+  <div class="bonus-block">
+    <h4>🏆 進階獎勵制度</h4>
+    <p>
+      專業有價，細心更貴！<br>
+      連續一個月達成 <strong>「零錯誤率」</strong>，<br>
+      時薪直接調升至 <strong>$280／h</strong>。<br>
+      我們珍惜每位對細節有強迫症的神隊友。
+    </p>
+  </div>
+</section>
+
+<!-- ══ FINAL CTA ══ -->
+<section class="final-section reveal">
+  <h2 class="sec-title">準備好加入了嗎？</h2>
+  <p>加入 Niceday，在生活縫隙裡<br>找份有質感、有成就感的工作。</p>
+
+  <a href="https://lin.ee/xP01tIZ" class="cta-btn cta-secondary" target="_blank" rel="noopener">
+    🙋 我要應徵，立刻加入！
+  </a>
+
+  <p class="line-note">💬 點擊後跳轉至 LINE 官方帳號</p>
+</section>
+
+<footer>© 2025 Niceday｜親子活動平台</footer>
+
+<script>
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  els.forEach(el => io.observe(el));
+</script>
+</body>
+</html>
